@@ -29,7 +29,7 @@
     <product_payment id="11" type="once" once_price="50" once_setup_price="20" />
     <product_payment id="12" type="recurrent" once_price="0" once_setup_price="0" m_price="30" q_price="90" b_price="180" a_price="360" bia_price="720" tria_price="1440" />
 
-    <product id="1" product_category_id="1" product_payment_id="1" type="custom" title="SSL Certificate" description="SSL cetificate information" unit="product" active="1" is_addon="0" addons="[3,4,5]" setup="after_payment" plugin="" created_at="2011-01-01 12:00:00" updated_at="2011-01-01 12:00:00"/>
+    <product id="1" product_category_id="1" product_payment_id="1" type="custom" title="SSL Certificate" description="SSL certificate information" unit="product" active="1" is_addon="0" addons="[3,4,5]" setup="after_payment" plugin="" created_at="2011-01-01 12:00:00" updated_at="2011-01-01 12:00:00"/>
     <product id="2" product_category_id="1" product_payment_id="2" type="custom" title="Custom product with plugin" description="Custom product with plugin" unit="product" active="1" is_addon="0" addons="[3,4,5]" setup="after_payment" plugin="" created_at="2011-01-01 12:00:00" updated_at="2011-01-01 12:00:00"/>
 
     <product id="3" product_category_id="1" product_payment_id="3" type="custom" title="Free Addon" description="Sold only as an addon" unit="product" active="1" is_addon="1" addons="" setup="after_payment" plugin="" created_at="2011-01-01 12:00:00" updated_at="2011-01-01 12:00:00"/>

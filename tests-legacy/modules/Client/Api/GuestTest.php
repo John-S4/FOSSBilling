@@ -218,7 +218,7 @@ class GuestTest extends \BBTestCase
 
     public function testResetPasswordNewFlow(): void
     {
-        $data['email'] = 'John@exmaple.com';
+        $data['email'] = 'John@example.com';
 
         $eventMock = $this->getMockBuilder('\Box_EventManager')->getMock();
         $eventMock->expects($this->atLeastOnce())->method('fire');

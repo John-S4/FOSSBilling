@@ -286,7 +286,7 @@ class Api_Admin_OrderTest extends BBDbApiTestCase
     }
 
     /**
-     * Test recurent promo for order
+     * Test recurrent promo for order
      * 1. If promo is recurrent then new invoice is generated with discount
      * 2. If promo is not recurrent then new invoice is generated for order total price.
      */

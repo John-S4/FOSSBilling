@@ -271,11 +271,11 @@ class ServiceTest extends \BBTestCase
     public function testgetPeriod(): void
     {
         $code = '1W';
-        $expexted = 'Every week';
+        $expected = 'Every week';
         $result = $this->service->getPeriod($code);
 
         $this->assertIsString($result);
-        $this->assertEquals($expexted, $result);
+        $this->assertEquals($expected, $result);
     }
 
     public function testgetCountries(): void

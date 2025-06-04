@@ -542,7 +542,7 @@ class ServiceTest extends \BBTestCase
         $model = new \Model_ActivityClientEmail();
         $model->loadBean(new \DummyBean());
         $model->client_id = 1;
-        $model->sender = 'sender@exemple.com';
+        $model->sender = 'sender@example.com';
         $model->recipients = 'recipient@example.com';
         $model->subject = 'Email Title';
         $model->content_html = '<b>Content</b>';

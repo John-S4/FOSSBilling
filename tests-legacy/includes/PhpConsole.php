@@ -217,7 +217,7 @@ class PhpConsole
     protected static function setCookie($name, $value)
     {
         if (headers_sent($file, $line)) {
-            exit('PhpConsole ERROR: setcookie() failed because haders are sent (' . $file . ':' . $line . '). Try to use ob_start()');
+            exit('PhpConsole ERROR: setcookie() failed because headers are sent (' . $file . ':' . $line . '). Try to use ob_start()');
         }
         setcookie($name, $value, ['expires' => null, 'path' => '/']);
     }
@@ -264,7 +264,7 @@ class PhpConsole
 
     public function handleError($code = null, $message = null, $file = null, $line = null)
     {
-        if (error_reporting() == 0) { // if error has been supressed with an @
+        if (error_reporting() == 0) { // if error has been suppressed with an @
             return;
         }
         if (!$code) {
