@@ -1276,9 +1276,9 @@
                 "ext-dom": "Required to use the XMLConverter and the HTMLConverter classes",
                 "ext-iconv": "Needed to ease transcoding CSV using iconv stream filters",
                 "ext-mbstring": "Needed to ease transcoding CSV using mb stream filters",
-                "ext-mysqli": "Requiered to use the package with the MySQLi extension",
+                "ext-mysqli": "Required to use the package with the MySQLi extension",
                 "ext-pdo": "Required to use the package with the PDO extension",
-                "ext-pgsql": "Requiered to use the package with the PgSQL extension",
+                "ext-pgsql": "Required to use the package with the PgSQL extension",
                 "ext-sqlite3": "Required to use the package with the SQLite3 extension"
             },
             "type": "library",

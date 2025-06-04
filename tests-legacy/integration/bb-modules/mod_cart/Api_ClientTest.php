@@ -98,7 +98,7 @@ class Box_Mod_Cart_Api_ClientTest extends BBDbApiTestCase
 
         try {
             $this->api_client->cart_checkout();
-            $this->fail('Promo code was aplied multiple times. Promo can only be applied once.');
+            $this->fail('Promo code was applied multiple times. Promo can only be applied once.');
         } catch (Exception $e) {
             $this->assertEquals(9874, $e->getCode());
         }

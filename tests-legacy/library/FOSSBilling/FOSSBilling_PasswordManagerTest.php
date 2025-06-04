@@ -30,9 +30,9 @@ class FOSSBilling_PasswordManagerTest extends PHPUnit\Framework\TestCase
         $this->assertIsString($hash);
         $this->assertNotEmpty($hash);
 
-        $veryfied = $boxPassword->verify($password, $hash);
-        $this->assertIsBool($veryfied);
-        $this->assertTrue($veryfied);
+        $verified = $boxPassword->verify($password, $hash);
+        $this->assertIsBool($verified);
+        $this->assertTrue($verified);
 
         $needRehashing = $boxPassword->needsRehash($hash);
         $this->assertIsBool($needRehashing);
