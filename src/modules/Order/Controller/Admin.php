@@ -79,7 +79,7 @@ class Admin implements \FOSSBilling\InjectionAwareInterface
             $client = $api->client_get(['id' => $_POST['client_id'] ?? null]);
         } catch (\Exception $e) {
             $this->di['mod_service']('system')->setPendingMessage($e->getMessage());
-            $app->redirect('/order');
+            $app->redirect('/order#tab-new');
         }
 
         return $app->render('mod_order_new', ['product' => $product, 'client' => $client]);
