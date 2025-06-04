@@ -244,6 +244,8 @@
 
     {{ DebugBar_render() }}
 
+    {% include 'partial_pending_messages.html.twig' ignore missing %}
+
     <div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index: 1070;">
     </div>
 </body>
