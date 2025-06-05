@@ -1,0 +1,41 @@
+:80 {
+    root * /var/www/html/src
+    encode gzip
+
+    # Redirect legacy BoxBilling IPN endpoint
+    redir /bb-ipn.php /ipn.php
+
+    # Block sensitive files
+    @forbidFiles {
+        path *.htaccess *.htpasswd *.bak *.conf *.inc *.ini *.lock *.log *.old *.sh *.sql *.twig *.yaml
+    }
+    respond @forbidFiles 403
+
+    # Block hidden files except .well-known
+    @hidden {
+        path /.*
+        not path /.well-known/*
+    }
+    respond @hidden 403
+
+    # Deny direct access to /data except for gateway assets
+    @denyData {
+        path /data/*
+        not path /data/assets/gateways/*
+    }
+    respond @denyData 403
+
+    # PHP handling for allowed entry points
+    @phpEntrypoints {
+        path /index.php /ipn.php /install/index.php /install/install.php
+    }
+    php_fastcgi @phpEntrypoints unix//run/php-fpm.sock
+
+    # Block execution of other PHP files
+    @otherPhp path *.php
+    respond @otherPhp 403
+
+    try_files {path} {path}/ /index.php?{query}
+
+    file_server
+}
